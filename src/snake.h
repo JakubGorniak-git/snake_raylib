@@ -12,6 +12,7 @@ public:
     ~Snake();
     std::deque<Vector2> body;
     bool grow;
+    void Reset();
     void addSegment();
     void Draw();
     void Update();

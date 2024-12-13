@@ -16,10 +16,12 @@ private:
     Color backgroundColor;
     Food food;
     Snake snake;
-
+    void GameOver();
     void Initialize();
     void Update();
     void Draw();
+    void CheckCollisionWithTail();
+    void CheckCollisionWithEdges();
     void CheckCollisionWithFood();
     bool eventTriggered(double interval);
 };

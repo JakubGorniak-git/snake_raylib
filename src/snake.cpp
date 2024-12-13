@@ -16,6 +16,10 @@ void Snake::addSegment(){
     body.push_front(Vector2Add(body[0], direction));
 }
 
+void Snake::Reset(){
+    body = {Vector2{6, 9}, Vector2{5, 9}, Vector2{4, 9}};
+    direction = {1,0};
+}
 void Snake::Draw() {
     Color darkGreen = {43, 51, 24, 255};
     for (unsigned int i = 0; i < body.size(); i++) {
@@ -24,6 +28,7 @@ void Snake::Draw() {
         DrawRectangle(x * 30, y * 30, 30, 30, darkGreen);
     }
 }
+
 
 void Snake::Update(){
     // If not growing, remove the last segment
